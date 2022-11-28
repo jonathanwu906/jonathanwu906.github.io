@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style type="text/css">
+        h1 {
+            font-family: sans-serif;
+            font-weight: lighter;
+            color: blueviolet;
+        }
+
+        p,
+        em {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        
+        .extra p {
+            color: inherit;
+        }
+
+        a em {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>New HTML5 Input Types Demo</h1>
+    <p>This form demonstrates the new HTML5 input types and the placeholder, required and autofocus attributes</p>
+    <div>
+        <p>
+            <label for="color">Color:
+                <input type="color" autofocus />
+                (Hexadecimal code such as #ADD8E6)<br>
+            </label>
+        </p>
+    </div>
+    <div class="extra" style="color: green">
+        <p>
+            <label for="date">Date:
+                <input type="date">
+                (yyyy-mm-dd)<br>
+            </label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="email">Email:
+                <input type="email" placeholder="name@domain.com">
+                (name@domain.com)
+            </label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="number">Number:
+                <input type="number">
+                (Enter a number between 0 and 7)
+            </label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="range">Range:
+                0 <input type="range" min="0" max="50"> 20
+            </label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="search">Search:
+                <input type="search" placeholder="search query">
+            </label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="time">Time:
+                <input type="time">
+                (hh:mm)
+            </label>
+        </p>
+    </div>
+    <div>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </p>
+    </div>
+    <div>
+        <p>
+            <a href="second.html">
+                <em>This is the link to another webpage</em>
+            </a>
+        </p>
+    </div>
+</body>
+
+</html>

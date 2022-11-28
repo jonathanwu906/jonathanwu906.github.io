@@ -1,0 +1,26 @@
+body {
+    padding: 5%;
+    font-family: sans-serif;
+    color: coral;
+    background-color: cornsilk;
+}
+
+.navbar {
+    top: auto;
+    left: auto;
+    width: fit-content;
+    position: relative;
+}
+
+li {
+    background: local;
+    margin: 1%;
+    padding: 1em;
+    border-right: 10%;
+}
+
+@media screen {
+    body {
+        background-color: whitesmoke;
+    }
+}

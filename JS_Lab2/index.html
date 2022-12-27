@@ -10,20 +10,20 @@
 
 <body>
     <p>
-        <img id="die1" src="dice/die1.png" alt="die 1 image">
-        <img id="die2" src="dice/die1.png" alt="die 2 image">
-        <img id="die3" src="dice/die1.png" alt="die 3 image">
-        <img id="die4" src="dice/die1.png" alt="die 4 image">
-        <img id="die5" src="dice/die1.png" alt="die 5 image">
-        <img id="die6" src="dice/die1.png" alt="die 6 image">
+        <img id="die1" src="die1.png" alt="die 1 image">
+        <img id="die2" src="die1.png" alt="die 2 image">
+        <img id="die3" src="die1.png" alt="die 3 image">
+        <img id="die4" src="die1.png" alt="die 4 image">
+        <img id="die5" src="die1.png" alt="die 5 image">
+        <img id="die6" src="die1.png" alt="die 6 image">
     </p>
     <p>
-        <img id="die7" src="dice/die1.png" alt="die 7 image">
-        <img id="die8" src="dice/die1.png" alt="die 8 image">
-        <img id="die9" src="dice/die1.png" alt="die 9 image">
-        <img id="die10" src="dice/die1.png" alt="die 10 image">
-        <img id="die11" src="dice/die1.png" alt="die 11 image">
-        <img id="die12" src="dice/die1.png" alt="die 12 image">
+        <img id="die7" src="die1.png" alt="die 7 image">
+        <img id="die8" src="die1.png" alt="die 8 image">
+        <img id="die9" src="die1.png" alt="die 9 image">
+        <img id="die10" src="die1.png" alt="die 10 image">
+        <img id="die11" src="die1.png" alt="die 11 image">
+        <img id="die12" src="die1.png" alt="die 12 image">
     </p>
     
     <form action="#">
@@ -40,7 +40,7 @@
         function rollDice() {
             var face;
 
-            for (var i = 1; i <= 12; ++i) {
+            for (var i = 1; i <= 12; i++) {
                 face = Math.floor(1 + Math.random() * 6);
                 setImage(i, face);
                 tallyRolls(face);
@@ -52,7 +52,7 @@
 
         function setImage(dieNumber, face) {
             var dieImg = document.getElementById("die" + dieNumber);
-            dieImg.setAttribute("src", "dice/" + "die" + face + ".png");
+            dieImg.setAttribute("src", "die" + face + ".png");
             dieImg.setAttribute("alt", "die image with" + face + " spot(s)");
         }
 
@@ -82,7 +82,8 @@
         function updateFrequencyTable() {
             var tableDiv = document.getElementById("frequencyTableDiv");
 
-            tableDiv.innerHTML = "<table>" +
+            tableDiv.innerHTML = 
+                "<table>" +
                 "<caption>Die Rolling Frequencies</caption>" + "<thead><th>Face</th><th>Frequency</th>" + "<th>Percent</th></thead>" +
                 "<tbody><tr> <td>1</td> <td>" + frequency1 + "</td> <td>" + Math.floor((frequency1 / totalDice) * 100) + "%" + "</td> </tr>" +
                        "<tr> <td>2</td> <td>" + frequency2 + "</td> <td>" + Math.floor((frequency2 / totalDice) * 100) + "%" + "</td> </tr>" +

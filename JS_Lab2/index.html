@@ -32,15 +32,50 @@
     <div id="frequencyTableDiv"></div>
 
     <script>
+
+        var die1Image;
+        var die2Image;
+        var die3Image;
+        var die4Image;
+        var die5Image;
+        var die6Image;
+        var die7Image;
+        var die8Image;
+        var die9Image;
+        var die10Image;
+        var die11Image;
+        var die12Image;
+
+        var frequency1 = 0;
+        var frequency2 = 0;
+        var frequency3 = 0;
+        var frequency4 = 0;
+        var frequency5 = 0;
+        var frequency6 = 0;
+        
+        var totalDice = 0;
+
         function start() {
             var button = document.getElementById("rollButton");
             button.addEventListener("click", rollDice, false);
+            die1Image = document.getElementById("die1");
+            die2Image = document.getElementById("die2");
+            die3Image = document.getElementById("die3");
+            die4Image = document.getElementById("die4");
+            die5Image = document.getElementById("die5");
+            die6Image = document.getElementById("die6");
+            die7Image = document.getElementById("die7");
+            die8Image = document.getElementById("die8");
+            die9Image = document.getElementById("die9");
+            die10Image = document.getElementById("die10");
+            die11Image = document.getElementById("die11");
+            die12Image = document.getElementById("die12");
         }
 
         function rollDice() {
             var face;
 
-            for (var i = 1; i <= 12; i++) {
+            for (var i = 1; i <= 12; ++i) {
                 face = Math.floor(1 + Math.random() * 6);
                 setImage(i, face);
                 tallyRolls(face);

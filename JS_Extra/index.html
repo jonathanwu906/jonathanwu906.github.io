@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Bonus</title>
+</head>
+<body>
+    <script>
+
+        var data;
+        var char;
+        var firstIndex;
+        var lastIndex;
+        var firstIndexStartAt;
+
+        data = window.prompt("input data");
+        
+        char = window.prompt("input a char to search");
+
+        firstIndex = data.indexOf(char);
+
+        lastIndex = data.lastIndexOf(char);
+
+        firstIndexStartAt = data.indexOf(char, 3);
+
+        document.write(firstIndex);
+        document.write("<br>");
+        document.write(lastIndex);
+        document.write("<br>");
+        document.write(firstIndexStartAt);
+
+    </script>
+</body>
+</html>
